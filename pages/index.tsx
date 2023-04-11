@@ -11,7 +11,7 @@ export default function Home() {
 				<link rel='icon' href='%PUBLIC_URL%/favicon.ico' />
 				<title>UA Exposition</title>
 			</Head>
-			<main className={styles.main}></main>
+			<main className={styles.main}>index page</main>
 		</>
 	)
 }

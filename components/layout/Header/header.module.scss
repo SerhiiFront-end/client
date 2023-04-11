@@ -1,0 +1,24 @@
+.headerDiv {
+    @apply flex sticky justify-center top-0 py-5;
+
+    .navbar {
+        @apply w-full;
+
+        .list {
+            @apply flex justify-around text-center;
+
+            .linkItem {
+                @apply text-neutral-300;
+
+                &:hover {
+                    @apply text-violet-800 ease-linear duration-300;
+                }
+
+            }
+
+            .activeLink {
+                @apply text-neutral-700;
+            }
+        }
+    }
+}
