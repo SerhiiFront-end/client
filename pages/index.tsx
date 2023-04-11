@@ -1,11 +1,9 @@
 import styles from "@/styles/Home.module.scss"
 import Head from "next/head"
-import Header from "../UI/Header/Header"
 export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>UA Exposition</title>
 				<meta
 					name='viewport'
 					content='width=device-width, initial-scale=1'
@@ -13,9 +11,7 @@ export default function Home() {
 				<link rel='icon' href='%PUBLIC_URL%/favicon.ico' />
 				<title>UA Exposition</title>
 			</Head>
-			<main className={styles.main}>
-				<Header></Header>
-			</main>
+			<main className={styles.main}></main>
 		</>
 	)
 }
