@@ -16,11 +16,12 @@ const Header: FC = () => {
 		<header className={styles.headerDiv}>
 			<nav className={styles.navbar}>
 				<ul className={styles.list}>
-					{HeaderLinks.map((el) => {
+					{HeaderLinks.map((el, i) => {
 						return (
 							<Link
-								href={"/" + el.ref}
-								className={checkActivation("/" + el.ref)}
+								href={el.ref}
+								className={checkActivation(el.ref)}
+								key={i}
 							>
 								<li className={styles.listItem}>{el.title}</li>
 							</Link>
