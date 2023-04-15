@@ -5,13 +5,6 @@ import HeaderLinks from "./HeaderLinks.json"
 import styles from "./header.module.scss"
 const Header: FC = () => {
 	const { pathname } = useRouter()
-	const checkActivation = (arg: string) => {
-		if (pathname === arg) {
-			return styles.activeLink
-		} else {
-			return styles.linkItem
-		}
-	}
 	return (
 		<header className={styles.headerDiv}>
 			<nav className={styles.navbar}>
@@ -20,7 +13,11 @@ const Header: FC = () => {
 						return (
 							<Link
 								href={el.ref}
-								className={checkActivation(el.ref)}
+								className={
+									pathname === el.ref
+										? styles.activeLink
+										: styles.linkItem
+								}
 								key={i}
 							>
 								<li className={styles.listItem}>{el.title}</li>
